@@ -18,7 +18,7 @@ class VkTagStats {
 
     private val jsonParser = JsonParser()
 
-    fun doShit(tag: String, hours: Int): IntArray {
+    fun tagHist(tag: String, hours: Int): IntArray {
         val time = Instant.now().minus(hours.toLong(), ChronoUnit.HOURS).epochSecond
         val hashTag = URLEncoder.encode("#$tag", "utf8")
         val url = "$baseUrl?q=$hashTag&start_time=$time&count=200&access_token=$accessKey&v=$apiVersion" // %23 == #
