@@ -13,8 +13,8 @@ private const val sample = "res/sample_response.json"
 
 class PostParserTest {
 
-    private val response: String = with(File(sample).inputStream().bufferedReader()) {
-        readText()
+    private val response: String = File(sample).inputStream().bufferedReader().use {
+        it.readText()
     }
 
     @Test
