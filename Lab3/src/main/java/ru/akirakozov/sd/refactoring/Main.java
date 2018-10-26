@@ -38,6 +38,6 @@ public class Main {
         context.addServlet(new ServletHolder(new QueryServlet()),"/query");
 
         server.start();
-        server.join();
+//        server.join();
     }
 }
