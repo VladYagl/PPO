@@ -1,9 +1,7 @@
-package ru.akirakozov.sd.refactoring.servlet;
+package ru.akirakozov.sd.refactoring;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.akirakozov.sd.refactoring.Main;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,10 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +22,7 @@ class ServletsTest {
     void setUp() {
         try {
             //noinspection ResultOfMethodCallIgnored
-            new File(DB_PATH).delete();
+            assert new File(DB_PATH).delete();
             Main.main(new String[0]);
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,6 +60,11 @@ class ServletsTest {
 
     @Test
     void coreTest() throws IOException {
+        assertEquals("<html><body><h1>Product with min price: </h1>null</body></html>", query("min"));
+        assertEquals("<html><body><h1>Product with max price: </h1>null</body></html>", query("max"));
+        assertEquals("<html><body>Summary price: 0</body></html>", query("sum"));
+        assertEquals("<html><body>Number of products: 0</body></html>", query("count"));
+
         assertEquals("OK", add("black_dildo", 69));
         assertEquals("OK", add("white_dildo", 96));
         assertEquals(expectGet(List.of("black_dildo", "white_dildo"), List.of(69, 96)), get());
@@ -78,5 +78,7 @@ class ServletsTest {
         assertEquals("<html><body><h1>Product with max price: </h1>candy_ken_dress\t9999</br></body></html>", query("max"));
         assertEquals("<html><body>Summary price: 10167</body></html>", query("sum"));
         assertEquals("<html><body>Number of products: 4</body></html>", query("count"));
+
+        assertEquals("<html><body>Unknown command: wrong_command</body></html>", query("wrong_command"));
     }
 }
