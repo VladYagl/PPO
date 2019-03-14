@@ -66,54 +66,54 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
-      out.write("<html>\r\n");
-      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("<head>\r\n");
-      out.write("    <style>\r\n");
-      out.write("        table, th, td {\r\n");
-      out.write("            border: 1px solid black;\r\n");
-      out.write("            border-collapse: collapse;\r\n");
-      out.write("        }\r\n");
-      out.write("    </style>\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
+      out.write("<html>\n");
+      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("<head>\n");
+      out.write("    <style>\n");
+      out.write("        table, th, td {\n");
+      out.write("            border: 1px solid black;\n");
+      out.write("            border-collapse: collapse;\n");
+      out.write("        }\n");
+      out.write("    </style>\n");
       out.write("    <title>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${list.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</title>\r\n");
-      out.write("</head>\r\n");
-      out.write("<body>\r\n");
-      out.write("\r\n");
+      out.write("</title>\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("\n");
       out.write("<h1>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${list.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h1>\r\n");
-      out.write("\r\n");
-      out.write("<table>\r\n");
+      out.write("</h1>\n");
+      out.write("\n");
+      out.write("<table>\n");
       out.write("    ");
-      out.write("\r\n");
-      out.write("\r\n");
+      out.write("\n");
+      out.write("\n");
       out.write("    ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("\r\n");
-      out.write("\r\n");
+      out.write("\n");
+      out.write("\n");
       out.write("    ");
-      out.write("\r\n");
-      out.write("</table>\r\n");
-      out.write("\r\n");
-      out.write("<h3>Add new tasks</h3>\r\n");
+      out.write("\n");
+      out.write("</table>\n");
+      out.write("\n");
+      out.write("<h3>Add new tasks</h3>\n");
       if (_jspx_meth_form_form_0(_jspx_page_context))
         return;
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<br>\r\n");
-      out.write("<br>\r\n");
-      out.write("\r\n");
-      out.write("<input type=\"button\" value=\"Back\" onclick=\"location.href='/'\"/>\r\n");
-      out.write("\r\n");
-      out.write("</body>\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<br>\n");
+      out.write("<br>\n");
+      out.write("\n");
+      out.write("<input type=\"button\" value=\"Back\" onclick=\"location.href='/'\"/>\n");
+      out.write("\n");
+      out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -143,25 +143,25 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n");
-          out.write("        <tr>\r\n");
+          out.write("\n");
+          out.write("        <tr>\n");
           out.write("            <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${task.getId()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
+          out.write("</td>\n");
           out.write("            <td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${task.getName()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("            <td>\r\n");
+          out.write("</td>\n");
+          out.write("            <td>\n");
           out.write("                <input type=\"checkbox\" onclick=\"location.href='/check-task?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${task.getId()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("'\"\r\n");
+          out.write("'\"\n");
           out.write("                        ");
           if (_jspx_meth_c_choose_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
-          out.write("\r\n");
-          out.write("                />\r\n");
-          out.write("            </td>\r\n");
-          out.write("        </tr>\r\n");
+          out.write("\n");
+          out.write("                />\n");
+          out.write("            </td>\n");
+          out.write("        </tr>\n");
           out.write("    ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -193,11 +193,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     int _jspx_eval_c_choose_0 = _jspx_th_c_choose_0.doStartTag();
     if (_jspx_eval_c_choose_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n");
+        out.write("\n");
         out.write("                            ");
         if (_jspx_meth_c_when_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
-        out.write("\r\n");
+        out.write("\n");
         out.write("                        ");
         int evalDoAfterBody = _jspx_th_c_choose_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -224,8 +224,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     int _jspx_eval_c_when_0 = _jspx_th_c_when_0.doStartTag();
     if (_jspx_eval_c_when_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
-        out.write("\r\n");
-        out.write("                                checked\r\n");
+        out.write("\n");
+        out.write("                                checked\n");
         out.write("                            ");
         int evalDoAfterBody = _jspx_th_c_when_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -256,21 +256,21 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       int _jspx_eval_form_form_0 = _jspx_th_form_form_0.doStartTag();
       if (_jspx_eval_form_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("\r\n");
-          out.write("    <table>\r\n");
-          out.write("        <tr>\r\n");
+          out.write("\n");
+          out.write("    <table>\n");
+          out.write("        <tr>\n");
           out.write("            <td>");
           if (_jspx_meth_form_label_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
             return true;
-          out.write("</td>\r\n");
+          out.write("</td>\n");
           out.write("            <td>");
           if (_jspx_meth_form_input_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
             return true;
-          out.write("</td>\r\n");
-          out.write("            <td><input type=\"submit\" value=\"add\"></td>\r\n");
-          out.write("        </tr>\r\n");
-          out.write("    </table>\r\n");
-          out.write("\r\n");
+          out.write("</td>\n");
+          out.write("            <td><input type=\"submit\" value=\"add\"></td>\n");
+          out.write("        </tr>\n");
+          out.write("    </table>\n");
+          out.write("\n");
           int evalDoAfterBody = _jspx_th_form_form_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

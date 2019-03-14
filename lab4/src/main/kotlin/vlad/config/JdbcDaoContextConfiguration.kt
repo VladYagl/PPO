@@ -7,7 +7,7 @@ import vlad.dao.TaskListJdbcDao
 
 import javax.sql.DataSource;
 
-class JdbcDaoContextConfiguration {
+open class JdbcDaoContextConfiguration {
     @Bean
     fun taskJdbcDao(dataSource: DataSource): TaskJdbcDao {
         return TaskJdbcDao(dataSource)

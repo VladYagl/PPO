@@ -6,7 +6,7 @@ import javax.sql.DataSource
 import org.springframework.jdbc.core.BeanPropertyRowMapper
 
 
-class TaskJdbcDao(dataSource: DataSource) : JdbcDaoSupport(), TaskDao {
+open class TaskJdbcDao(dataSource: DataSource) : JdbcDaoSupport(), TaskDao {
     init {
         setDataSource(dataSource)
     }

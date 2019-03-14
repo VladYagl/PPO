@@ -14,7 +14,7 @@ import vlad.model.TaskList
 
 
 @Controller
-class TaskController {
+open class TaskController {
     @Autowired
     private val taskDao: TaskDao? = null
 

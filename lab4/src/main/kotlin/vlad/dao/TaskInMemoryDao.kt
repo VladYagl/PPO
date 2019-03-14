@@ -5,7 +5,7 @@ import java.util.ArrayList
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.atomic.AtomicInteger
 
-class TaskInMemoryDao : TaskDao {
+open class TaskInMemoryDao : TaskDao {
     private val lastId = AtomicInteger(0)
     private val tasks = CopyOnWriteArrayList<Task>()
 

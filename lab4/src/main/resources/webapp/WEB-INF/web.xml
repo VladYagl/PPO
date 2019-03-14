@@ -9,5 +9,11 @@
         version="2.5">
 
     <!-- Config here. -->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>shit</taglib-uri>
+            <taglib-location>/webapp/WEB-INF/views/c-1_0-rt.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 
 </web-app>
