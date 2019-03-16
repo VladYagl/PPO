@@ -15,7 +15,7 @@ import java.io.FileNotFoundException
 import kotlin.test.assertEquals
 
 
-private const val PORT = 32453
+private const val PORT = 8080
 
 internal class UrlUtilsTest {
 
@@ -26,7 +26,7 @@ internal class UrlUtilsTest {
                     .match(startsWithUri("/ping"))
                     .then(stringContent("pong"))
 
-            val response = main.load("https://localhost:$PORT/ping")
+            val response = main.load("http://localhost:$PORT/ping")
 
             assertEquals("pong", response)
         }
@@ -40,7 +40,7 @@ internal class UrlUtilsTest {
                         .match(startsWithUri("/ping"))
                         .then(status(HttpStatus.NOT_FOUND_404))
 
-                main.load("https://localhost:$PORT/ping")
+                main.load("http://localhost:$PORT/ping")
             }
         }
     }

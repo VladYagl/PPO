@@ -8,7 +8,7 @@ import javax.net.ssl.HttpsURLConnection
 
 fun load(url: String): String {
     println(url)
-    val connection = URL(url).openConnection() as HttpsURLConnection
+    val connection = URL(url).openConnection() as HttpURLConnection
 
     connection.inputStream.bufferedReader().use {
         return it.readText()
